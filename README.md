@@ -11,3 +11,11 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat ignition deploy ./ignition/modules/Lock.ts
 ```
+
+npx hardhat compile
+
+npx hardhat run scripts/deploy1155.ts --network network
+
+npx hardhat run scripts/mintNFT721.ts --network network
+
+npx hardhat run scripts/mintNFT1155.ts --network network
