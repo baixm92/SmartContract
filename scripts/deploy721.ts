@@ -7,8 +7,9 @@ async function main() {
   console.log("PrivateKey set:", !!ACCOUNT_ADDRESS);
   const deployedContract = await hre.ethers.deployContract(
     "TestToken721",
-    [ACCOUNT_ADDRESS],
-    { gasPrice: hre.ethers.parseEther("0.00000002") }
+    [ACCOUNT_ADDRESS]
+    // 如果报错，请放开下面注释掉的代码再尝试
+    // { gasPrice: hre.ethers.parseEther("0.00000002") }
   );
   await deployedContract.waitForDeployment();
   console.log(

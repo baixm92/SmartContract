@@ -22,10 +22,7 @@ async function main() {
     if (!NFT_TO_ADDRESS) {
       console.log("请在.env文件中设置NFT_TO_ADDRESS变量。");
     }
-    const NFT_INFO_1155 = process.env.NFT_INFO_1155 || "";
-    if (!NFT_INFO_1155) {
-      console.log("请在.env文件中设置NFT_INFO_1155变量。");
-    }
+
     await contract.mint(NFT_TO_ADDRESS, 1, 1, "0x");
     console.log(`mint DawnToken1155`);
   } catch (error) {
